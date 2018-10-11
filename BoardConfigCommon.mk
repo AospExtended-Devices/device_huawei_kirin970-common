@@ -99,6 +99,11 @@ BOARD_ROOT_EXTRA_FOLDERS := \
 BOARD_PLAT_PRIVATE_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/private
 BOARD_PLAT_PUBLIC_SEPOLICY_DIR += $(VENDOR_PATH)/sepolicy/public
 
+# We modify several neverallows, so let the build proceed
+ifneq ($(TARGET_BUILD_VARIANT),user)
+SELINUX_IGNORE_NEVERALLOWS := true
+endif
+
 # Shims
 TARGET_LD_SHIM_LIBS := \
     /system/lib64/libdisplayengineservice.so|libshims_hwsmartdisplay_jni.so \
