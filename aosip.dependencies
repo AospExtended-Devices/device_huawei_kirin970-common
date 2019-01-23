@@ -1,0 +1,10 @@
+[
+  {
+    "repository": "vendor_huawei",
+    "target_path": "vendor/huawei"
+  },
+  {
+    "repository": "kernel_huawei_kirin970",
+    "target_path": "kernel/huawei/kirin970"
+  }
+]
