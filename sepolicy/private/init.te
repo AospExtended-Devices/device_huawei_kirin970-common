@@ -1,3 +1,5 @@
+domain_trans(init, rootfs, adbd)
+
 # Allow init to mount block devices
 allow init {
     hisee_data_file
@@ -24,3 +26,6 @@ allow init kernel:system module_request;
 allow hwsched system_data_file:lnk_file read;
 
 allow init sysfs_led:file setattr;
+
+# Allow init to mount adbd binary
+allow init rootfs:file mounton;

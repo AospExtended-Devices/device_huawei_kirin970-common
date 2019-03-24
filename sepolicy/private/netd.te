@@ -1,1 +1,6 @@
 allow netd sysfs:file { read write open };
+
+allow netd proc_net:dir { write add_name };
+allow netd self:capability fsetid;
+allow netd proc_net:file create;
+

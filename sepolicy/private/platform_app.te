@@ -1,3 +1,6 @@
 # Allow platform_app to read and write to sysfs_devices_platform_amba
 allow platform_app sysfs_devices_platform_amba:dir r_dir_perms;
 allow platform_app sysfs_devices_platform_amba:file rw_file_perms;
+
+allow platform_app app_data_file:file execute;
+allow platform_app bluetooth_prop:file { read write open };

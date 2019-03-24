@@ -7,3 +7,14 @@ allow priv_app default_hisi_hwservice:hwservice_manager find;
 
 allow priv_app mnt_modem_file:dir search;
 allow priv_app sysfs:file { read write open };
+
+allow priv_app bluetooth_prop:file { read write open };
+allow priv_app bootloader_boot_reason_prop:file { read write open };
+allow priv_app boottime_prop:file { read write open };
+allow priv_app device:dir { read write open };
+allow priv_app proc:file { read write open getattr };
+allow priv_app proc_interrupts:file { read write open };
+allow priv_app proc_modules:file { read write open getattr };
+allow priv_app sysfs:dir { read write open };
+allow priv_app sysfs_android_usb:file { read write open };
+
